@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Documentation</title>
+    <link rel="stylesheet" href="styles/css/main.css">
+</head>
+
+<body class="grid">
+
+    <header class="header">
+        <h1 class="primary-heading">Liquid Documentation</h1>
+    </header>
+    <nav class="nav">
+
+        <a href="#">Introduction</a>
+        <a href="#">Operators</a>
+        <a href="#">Types</a>
+        <a href="#">Variables</a>
+        <a href="#">Tage</a>
+        <a href="#">Tage</a>
+        <a href="#">Tage</a>
+        <a href="#">Tage</a>
+        <a href="#">Tage</a>
+        <a href="#">Tage</a>
+        <a href="#">Tage</a>
+        <a href="#">Tage</a>
+        <a href="#">Tage</a>
+        <a href="#">Tage</a>
+        <a href="#">Tage</a>
+        <a href="#">Tage</a>
+        
+        
+    </nav>
+
+    <main class="main container">
+            <section> <!--begin introduction-->
+        <h2 class="secondary-heading">Introduction</h2>
+
+        <p>
+            Liquid code can be categorized into
+            <strong>objects</strong>,
+            <strong>tags</strong>, and
+            <strong>filters</strong>.
+        </p>
+
+        <h2>Objects</h2>
+        Objects tell Liquid where to show content on a page. Objects and variable names are denoted by double curly braces:
+        <code>{{</code> and
+        <code>}}</code>.
+        <p>
+
+
+            <div class="content">
+                <p class="input">Input</p>
+                <code class=" code-input">{{ page.title }}
+                </code>
+            </div>
+
+            <div class="content ">
+                <p class="input ">
+                    Output
+                </p>
+                <p>Introduction</p>
+            </div>
+
+
+            <p>
+                In this case, Liquid is rendering the content of an object called
+                <strong> page.title</strong>, and that object contains the text
+                <strong>Introduction</strong>.
+            </p>
+      </section>  <!--end introduction-->
+
+            <section>  <!--begin tags-->
+            <h2 class="secondary-heading">Tags</h2>
+            <p>
+                Tags create the logic and control flow for templates. They are denoted by curly braces and percent signs:
+                <code>{%</code> and
+                <code> %}</code>.
+
+            </p>
+
+
+            <p>
+                The markup used in tags does not produce any visible text. This means that you can assign variables and create conditions
+                and loops without showing any of the Liquid logic on the page.
+            </p>
+
+            <div class="content">
+                <p class="input">Input</p>
+                <code class=" code-input">
+
+                    {% if user %} Hello {{ user.name }}! {% endif %}
+
+                </code>
+            </div>
+
+
+            <div class="content ">
+                <p class="input ">
+                    Output
+                </p>
+                <p>Hello Adam!</p>
+            </div>
+        </section>   <!--endtags-->
+
+            <section>  <!--begin  types-->
+                <p>
+                    Tags can be categorized into three types:
+
+
+                </p>
+                <ul class="tags">
+                    <li>
+                        <a href="">Control Flow</a>
+                    </li>
+                    <li>
+                        <a href="">Iteration</a>
+                    </li>
+                    <li>
+                        <a href="">Variable assignments</a>
+                    </li>
+                </ul>
+
+                <p>
+                    You can read more about each type of tag in their respective sections.
+                </p>
+            </section>  <!--end tags-->
+
+             <section> <!--begin filters-->
+                <h2 class="secondary-heading">
+                    Filters
+                </h2>
+
+                <p>
+                        Filters change the output of a Liquid object. They are used within an output and are separated by a <code>|</code>.
+                </p>
+                <div class="content">
+                        <p class="input">Input</p>
+                        <code class=" code-input">
+        
+                                {{ "/my/fancy/url" | append: ".html" }}
+        
+                        </code>
+                    </div>
+
+                    <div class="content ">
+                            <p class="input ">
+                                Output
+                            </p>
+                            <p>/my/fancy/url.html</p>
+                        </div>
+        
+
+             </section>  <!--end filters-->
+
+
+
+    </main>
+
+
+
+</body>
+
+</html>
